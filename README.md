@@ -14,17 +14,25 @@
 <h3>Тест случаи според критериумот Every Branch</h3>
 <p>За да ги испитам сите можни случаи според критериумот Every Branch ми беа доволни 7 тест случаи
 За таа цел, ги напишав сите гранки во Excel табела и според редовите во кодот ги изминував со вредностите кои ги зададов за променливите</p>  
-1) AllItems=null; payment=any -> се фрла исклучок и излегува од програма  
-2) AllItems=[]; payment=0 -> се праќа празна листа и 0  
-3) Allitems=[]; payment=-1 -> се праќа празна листа и негативна вредност за payment  
-4) AllItems[{name="",barcode=null,price"20",discount="0.5"}]; payment=any   -> се праќа еден објект кај што вреднсота за barcode е null и име е празен стринг  
-5) AllItems[{name="",barcode="01234",price="2000",discount="0.5"}]; payment=2   -> се праќа еден објект со barcode со 0 како почеток и цена над 300  
-6) AllItems[{name="abcde",barcode="4636vh",price"320",discount="0.5"}]; payment=any   -> се праќа објект со име и barcode кој содржи букви  
+
+1) AllItems=null; payment=any -> се фрла исклучок и излегува од програма
+   
+2) AllItems=[]; payment=0 -> се праќа празна листа и 0
+   
+3) Allitems=[]; payment=-1 -> се праќа празна листа и негативна вредност за payment
+   
+4) AllItems[{name="",barcode=null,price"20",discount="0.5"}]; payment=any   -> се праќа еден објект кај што вреднсота за barcode е null и име е празен стринг
+  
+5) AllItems[{name="",barcode="01234",price="2000",discount="0.5"}]; payment=2   -> се праќа еден објект со barcode со 0 како почеток и цена над 300
+   
+6) AllItems[{name="abcde",barcode="4636vh",price"320",discount="0.5"}]; payment=any   -> се праќа објект со име и barcode кој содржи букви
+   
 7) AllItems[{name="abcde",barcode="4636",price"20",discount="-1"}]; payment=any   -> се праќа објект со цена помала од 300 и discount негативна вредност  
 
 ![image](https://github.com/elenaakolevska/SI_2024_lab2_223002/assets/138319656/2e1957a2-fc6c-4bfb-a614-58cfecb2e5fc)
 
-<h3>Тест случаи според Multiple Condition критериумот</h3>
+<h3>Тест случаи според Multiple Condition критериумот</h3>  
+
 Тест случаите се однесуваат на условот  
 
 if (item.getPrice() > 300 && item.getDiscount() > 0 && item.getBarcode().charAt(0)== '0').
